@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -10,6 +9,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { MaincomComponent } from './maincom/maincom.component';
 import { ContantComponent } from './contant/contant.component';
 import { UserComponent } from './user/user.component';
+import { Signup2Component } from './signup2/signup2.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { UserComponent } from './user/user.component';
     SignUpComponent,
     MaincomComponent,
     ContantComponent,
-    UserComponent
+    UserComponent,
+    Signup2Component,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

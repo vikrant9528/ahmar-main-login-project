@@ -1,0 +1,33 @@
+<div class="container p-2">
+    <div class="d-flex flex-wrap align-items-center custom-admin">
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </form>
+      <div class="dropdown text-end">
+        <a  class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container admin-data">
+    <div class="heading mt-5"><h1><b>User Details</b></h1></div>
+        <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Email</th>
+          <th scope="col">Password</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let items of alluser">
+          <td>{{items.id}}</td>
+          <td>{{items.email}}</td>
+          <td>{{items.password}}</td>
+          <td><button class="btn btn-success" (click)="editUser(items.id)">Edit</button>  <button class="ms-2 btn btn-danger" (click)="deleteUser(items.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

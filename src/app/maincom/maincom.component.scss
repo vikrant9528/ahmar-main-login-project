@@ -1,8 +1,9 @@
 .maindiv {
     display: flex;
     width: 100%;
+    justify-content: space-between;
 }
-.sidebar {
+.sidebarmain {
     width: 20%;
 }
 .contantsection {

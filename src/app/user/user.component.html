@@ -1,1 +1,14 @@
-<p>user works!</p>
+<div class="container mt-3 main" >
+    <div  class="first row">
+        <div class="col-md-4" *ngFor="let post of posts; let i = index">
+            <div class="card" style="width: 18rem">
+            <img src="../../assets/images/carrdimage.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{post.id}}</h5>
+              <p class="card-text">{{post.title}}</p>
+              <a class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+          </div>
+    </div>
+</div>

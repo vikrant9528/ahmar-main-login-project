@@ -1,26 +1,25 @@
-
 <main class="form-signin w-80 m-auto main">
-    <form [formGroup]="signupform" class="pt-5" (ngSubmit)="onSubmit()">
+    <form [formGroup]="signupform2" class="pt-5" (ngSubmit)="onSubmit()">
       <img class="mb-4" src="../../assets/images/download.png" alt="" width="72" height="57">
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <h1 class="h3 mb-3 fw-normal">Please sign Up</h1>
   
       <div class="form-floating">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email" [ngClass]="{
-            'is-invalid': signupform.get('email').invalid && signupform.get('email').touched,
-            'is-valid': signupform.get('email').valid && signupform.get('email').touched
+            'is-invalid': signupform2.get('email').invalid && signupform2.get('email').touched,
+            'is-valid': signupform2.get('email').valid && signupform2.get('email').touched
           }">
         <label for="floatingInput">Email address</label>
-        <span *ngIf="signupform.get('email').invalid && signupform.get('email').touched" class="text-danger">
+        <span *ngIf="signupform2.get('email').invalid && signupform2.get('email').touched" class="text-danger">
             Please enter valid Email
           </span>
       </div>
       <div class="form-floating pt-3">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Pass" formControlName="password" [ngClass]="{
-            'is-invalid': signupform.get('password').invalid && signupform.get('password').touched,
-            'is-valid': signupform.get('password').valid && signupform.get('password').touched
+            'is-invalid': signupform2.get('password').invalid && signupform2.get('password').touched,
+            'is-valid': signupform2.get('password').valid && signupform2.get('password').touched
           }">
         <label for="floatingPassword">Password</label>
-        <span *ngIf="signupform.get('password').invalid && signupform.get('password').touched" class="text-danger">
+        <span *ngIf="signupform2.get('password').invalid && signupform2.get('password').touched" class="text-danger">
            Enter password having minimum length 6
           </span>
       </div>
@@ -31,10 +30,9 @@
           Remember me
         </label>
       </div>
-      <button class="btn btn-primary w-100 py-2" type="submit" [disabled]="signupform.invalid">Sign in</button>
-      <div *ngIf="verify" class="my-3 text-danger">
-        <a (click)="switchfun()">Please Sigup?</a>
-      </div>
+      <button class="btn btn-primary w-100 py-2" type="submit" [disabled]="signupform2.invalid">Sign Up</button>
     </form>
+    <div class="my-3">
+        <span>existing user?</span><span><a routerLink="/signup">click here</a></span>
+    </div>
   </main>
-<router-outlet></router-outlet>
